@@ -4110,10 +4110,10 @@ const LiveSourceConfig = ({
   const handleSaveOrder = () => {
     const order = liveSources.map((s) => s.key);
     withLoading('saveLiveSourceOrder', () => callLiveSourceApi({ action: 'sort', order }))
-      。then(() => {
+      .then(() => {
         setOrderChanged(false);
       })
-      。catch(() => {
+      .catch(() => {
         console.error('操作失败', 'sort', order);
       });
   };
