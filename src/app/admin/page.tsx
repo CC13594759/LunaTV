@@ -4110,10 +4110,10 @@ const LiveSourceConfig = ({
   const handleSaveOrder = () => {
     const order = liveSources.map((s) => s.key);
     withLoading('saveLiveSourceOrder', () => callLiveSourceApi({ action: 'sort', order }))
-      .then(() => {
+      。then(() => {
         setOrderChanged(false);
       })
-      .catch(() => {
+      。catch(() => {
         console.error('操作失败', 'sort', order);
       });
   };
@@ -4676,21 +4676,6 @@ function AdminPageClient() {
               onToggle={() => toggleTab('videoSource')}
             >
               <VideoSourceConfig config={config} refreshConfig={fetchConfig} />
-            </CollapsibleTab>
-
-            {/* 分类配置标签 */}
-            <CollapsibleTab
-              title='分类配置'
-              icon={
-                <FolderOpen
-                  size={20}
-                  className='text-gray-600 dark:text-gray-400'
-                />
-              }
-              isExpanded={expandedTabs.categoryConfig}
-              onToggle={() => toggleTab('categoryConfig')}
-            >
-              <CategoryConfig config={config} refreshConfig={fetchConfig} />
             </CollapsibleTab>
 
             {/* 数据迁移标签 - 仅站长可见 */}
