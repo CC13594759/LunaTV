@@ -930,7 +930,7 @@ export const UserMenu: React.FC = () => {
                 </div>
               </label>
             </div>
-
+          </div>
           {/* 底部说明 */}
           <div className='mt-6 pt-4 border-t border-gray-200 dark:border-gray-700'>
             <p className='text-xs text-gray-500 dark:text-gray-400 text-center'>
